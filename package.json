@@ -1,0 +1,16 @@
+{
+    "name": "us-economic-calendar",
+    "version": "0.1.0",
+    "type": "module",
+    "description": "US economic release calendar from official sources: BLS (NFP, CPI, PPI), BEA (GDP, PCE), Census (retail sales, housing), Fed FOMC decisions, and Treasury auctions, with exact release times and impact ratings.",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "dependencies": {
+        "apify": "^3.2.6",
+        "cheerio": "^1.0.0"
+    },
+    "scripts": {
+        "start": "node src/main.js"
+    }
+}

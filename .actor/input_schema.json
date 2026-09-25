@@ -1,0 +1,69 @@
+{
+    "title": "US Economic Calendar Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "range": {
+            "title": "Date range",
+            "type": "string",
+            "editor": "select",
+            "description": "Which dates to return, in US Eastern time. Pick \"custom\" to set your own start and end dates below.",
+            "enum": ["today", "tomorrow", "this_week", "next_week", "next_7_days", "this_month", "next_month", "next_30_days", "custom"],
+            "enumTitles": ["Today", "Tomorrow", "This week (Mon-Sun)", "Next week (Mon-Sun)", "Next 7 days", "This month", "Next month", "Next 30 days", "Custom dates"],
+            "default": "next_7_days",
+            "prefill": "next_7_days"
+        },
+        "startDate": {
+            "title": "Start date (custom range)",
+            "type": "string",
+            "editor": "datepicker",
+            "description": "YYYY-MM-DD. Only used when Date range is \"Custom dates\"."
+        },
+        "endDate": {
+            "title": "End date (custom range)",
+            "type": "string",
+            "editor": "datepicker",
+            "description": "YYYY-MM-DD. Only used when Date range is \"Custom dates\"."
+        },
+        "impactLevels": {
+            "title": "Impact levels",
+            "type": "array",
+            "editor": "select",
+            "description": "High: jobs report (NFP), CPI, GDP, PCE, retail sales, FOMC decisions. Medium: PPI, JOLTS, housing starts, durable goods, trade, Treasury note/bond auctions. Low: everything else.",
+            "items": {
+                "type": "string",
+                "enum": ["high", "medium", "low"],
+                "enumTitles": ["High", "Medium", "Low"]
+            },
+            "default": ["high", "medium", "low"],
+            "prefill": ["high", "medium", "low"]
+        },
+        "sources": {
+            "title": "Agencies",
+            "type": "array",
+            "editor": "select",
+            "description": "Which official calendars to include. All are selected by default.",
+            "items": {
+                "type": "string",
+                "enum": ["bls", "bea", "census", "fed", "treasury"],
+                "enumTitles": ["BLS: jobs, CPI, PPI, JOLTS", "BEA: GDP, PCE, trade", "Census: retail sales, housing, durable goods", "Federal Reserve: FOMC decisions", "Treasury: bill, note and bond auctions"]
+            },
+            "default": ["bls", "bea", "census", "fed", "treasury"]
+        },
+        "keyword": {
+            "title": "Keyword filter",
+            "type": "string",
+            "editor": "textfield",
+            "description": "Only return releases whose title contains this text, e.g. \"price index\" or \"GDP\". Leave empty for all."
+        },
+        "maxResults": {
+            "title": "Max results",
+            "type": "integer",
+            "editor": "number",
+            "description": "Stop after this many releases.",
+            "default": 500,
+            "minimum": 1,
+            "maximum": 5000
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of US Economic Calendar",
+    "properties": {
+        "results": {
+            "type": "string",
+            "title": "Scheduled releases",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}

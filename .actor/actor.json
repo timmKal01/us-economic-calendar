@@ -1,0 +1,13 @@
+{
+    "actorSpecification": 1,
+    "name": "us-economic-calendar",
+    "title": "US Economic Calendar: CPI, NFP, GDP & FOMC Dates",
+    "description": "Official US economic release calendar with exact release times: BLS jobs report, CPI and PPI, BEA GDP and PCE, Census retail sales and housing, Fed FOMC decisions, and Treasury auctions. Straight from the agencies, no scraping of third-party calendars.",
+    "version": "0.1",
+    "meta": {
+        "templateId": "custom-no-proxy"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "dockerfile": "../Dockerfile"
+}
