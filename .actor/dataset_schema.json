@@ -1,0 +1,78 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "eventId",
+                    "date",
+                    "timeEt",
+                    "timestampUtc",
+                    "isAllDay",
+                    "agency",
+                    "agencyName",
+                    "title",
+                    "period",
+                    "impact",
+                    "category",
+                    "url"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "eventId": {
+                        "label": "Event ID",
+                        "format": "text"
+                    },
+                    "date": {
+                        "label": "Date",
+                        "format": "text"
+                    },
+                    "timeEt": {
+                        "label": "Time et",
+                        "format": "text"
+                    },
+                    "timestampUtc": {
+                        "label": "Timestamp utc",
+                        "format": "date"
+                    },
+                    "isAllDay": {
+                        "label": "Is all day",
+                        "format": "boolean"
+                    },
+                    "agency": {
+                        "label": "Agency",
+                        "format": "text"
+                    },
+                    "agencyName": {
+                        "label": "Agency name",
+                        "format": "text"
+                    },
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "period": {
+                        "label": "Period",
+                        "format": "text"
+                    },
+                    "impact": {
+                        "label": "Impact",
+                        "format": "text"
+                    },
+                    "category": {
+                        "label": "Category",
+                        "format": "text"
+                    },
+                    "url": {
+                        "label": "URL",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}
